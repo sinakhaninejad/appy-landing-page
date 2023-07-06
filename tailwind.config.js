@@ -16,8 +16,3 @@ export default {
   },
   plugins: [],
 };
-
-// E2E8F0 nav border
-// 2563EB get starter
-// 0F172A blue gray nav text
-// 475569 footer gray

@@ -1,9 +1,18 @@
+//react icons
 import { BiSolidChevronDown } from "react-icons/bi";
 import { RiCloseFill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaPlay } from "react-icons/fa";
+//pictures
 import HeroPicture from "./images/Col.png";
+import EssentialPicture from "./images/essential-sec-pic.png";
+//svg import
+import RedCircle from "./images/red-circle.svg";
+import BlueCircle from "./images/blue-circle.svg";
+import YellowCircle from "./images/yellow-circle.svg";
+//hooks
 import { useState } from "react";
+
 function App() {
   const [navExtendted, setNavExtend] = useState(true);
   function extendNav() {
@@ -59,8 +68,8 @@ function App() {
         </nav>
       </header>
       <main className="">
-        <section>
-          <div className="container| w-11/12 mx-auto my-16">
+        <section className="py-20 sm:py-12">
+          <div className="container| w-11/12 mx-auto ">
             <div className="even-columns| flex sm:flex-col justify-between items-center sm:text-center">
               <div className="flow| w-1/2 sm:w-10/12 ">
                 <h1 className="text-6xl sm:text-5xl font-extrabold leading-tight ">
@@ -85,6 +94,65 @@ function App() {
               </div>
               <div className="w-1/2flex justify-end mt-10">
                 <img className="" src={HeroPicture} alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="bg-[#F1F5F9] py-20 sm:py-12">
+          <div className="container| flex sm:flex-col justify-between items-center gap-4 w-11/12 mx-auto ">
+            <div className="flex flex-col items-center text-center max-w-md">
+              <img src={RedCircle} />
+              <h4 className="my-4 text-2xl ">Fermentum amet</h4>
+              <p className="text-lg ">
+                Pellentesque quis tincidunt sit sed. Tortor massa sed habitant
+                dignissim senectus purus. Consectetur integer id in et pulvinar
+                interdum id.
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center my-8 max-w-sm">
+              <img src={YellowCircle} />
+              <h4 className="my-4 text-2xl ">Dignissim quam</h4>
+              <p className="text-lg ">
+                Quam sed neque vitae viverra purus venenatis ac non. Eget sed
+                nunc, amet, nibh nulla. Morbi sed risus ullamcorper diam, elit
+                ut non.
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center max-w-sm">
+              <img src={BlueCircle} />
+              <h4 className="my-4 text-2xl ">Risus morbi</h4>
+              <p className="text-lg ">
+                Euismod sed pellentesque ut elementum. Accumsan gravida turpis
+                ac at. Ullamcorper vitae non est elit odio at augue consequat.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="py-20 sm:py-12">
+          <div className="container| w-11/12 mx-auto ">
+            <h2 className="text-center text-5xl sm:text-3xl font-extrabold sm:font-bold ">
+              All the essential tools
+            </h2>
+            <p className="text-lg text-center mt-7 mb-20">
+              Odio vulputate cras vel lacinia turpis volutpat adipiscing.
+              Sollicitudin at velit, blandit tempus nunc in.
+            </p>
+            <div className="even-columns| mx-auto flex sm:flex-col gap-12 justify-between items-center">
+              <div className="w-1/2 flex justify-center">
+                <img className=" " src={EssentialPicture} alt="" />
+              </div>
+              <div className="w-1/2  ">
+                <h4 className="text-xl font-medium mb-8">Sem augue tempus</h4>
+                <p className="font-normal text-lg mb-8">
+                  Venenatis blandit habitasse nunc, sapien enim elit in. Arcu,
+                  pharetra, et cursus sit senectus in blandit. Aliquet enim
+                  fermentum non semper nibh ut neque. Pellentesque ut tincidunt
+                  vitae arcu bibendum malesuada lorem sapien volutpat.
+                </p>
+                <h4 className="text-xl font-medium mb-8">
+                  Habitant integer interdum a
+                </h4>
+                <h4 className="text-xl font-medium">Tempus natoque id</h4>
               </div>
             </div>
           </div>
