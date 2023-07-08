@@ -5,7 +5,7 @@
 
 ## Installation
 1.Clone the repository:
-git clone [https://github.com/sinakhaninejad/appy-landing-page.git]
+git clone (https://github.com/sinakhaninejad/appy-landing-page.git)
 
 2.Install dependencies:
 npm install
