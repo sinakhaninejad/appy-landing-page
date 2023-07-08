@@ -3,6 +3,7 @@ import { BiSolidChevronDown } from "react-icons/bi";
 import { RiCloseFill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaPlay } from "react-icons/fa";
+import { BiChevronDown } from "react-icons/bi";
 //pictures
 import HeroPicture from "./images/hero-picture.png";
 import EssentialPicture from "./images/essential-sec-pic.png";
@@ -30,6 +31,12 @@ import "swiper/css/scrollbar";
 
 function App() {
   const [navExtendted, setNavExtend] = useState(true);
+
+  const [firstD, setFirstD] = useState(true);
+  const [secondD, setSecondD] = useState(false);
+  const [thirdD, setThirdD] = useState(false);
+  const [forthD, setForthD] = useState(false);
+  const [fifthD, SetFifthD] = useState(false);
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
   function extendNav() {
     setNavExtend(!navExtendted);
@@ -200,7 +207,7 @@ function App() {
         </section>
         <section className="py-20 sm:py-12">
           <div className="container| w-11/12 mx-auto ">
-            <h2 className="text-center text-5xl sm:text-3xl font-extrabold sm:font-bold ">
+            <h2 className="text-center  font-extrabold sm:font-bold ">
               Focus on what matters
             </h2>
             <p className="text-lg text-center mt-7 mb-20">
@@ -249,8 +256,6 @@ function App() {
               slidesPerView={1}
               navigation={screenSize.width >= 640 ? true : false}
               pagination={{ clickable: true }}
-              onSwiper={(swiper) => console.log(swiper)}
-              onSlideChange={() => console.log("slide change")}
             >
               <SwiperSlide>
                 <div className="flex sm:flex-col justify-around items-center">
@@ -360,7 +365,217 @@ function App() {
             </Swiper>
           </div>
         </section>
+        <section className="py-20 sm:py-12 ">
+          <div className="container| w-11/12 mx-auto flex flex-col justify-between ">
+            <h2 className="text-5xl sm:text-3xl font-extrabold sm:font-bold text-center pb-20">
+              Answers to your questions
+            </h2>
+            <div className=" flex flex-col ">
+              <div
+                onClick={() => {
+                  setFirstD(!firstD);
+                }}
+                className="cursor-pointer py-7 border-nav-border border-solid border-t border-l-0 border-r-0 border-b-0"
+              >
+                <h3 className="font-normal text-xl text-main-button flex justify-between">
+                  Enim sodales consequat adipiscing facilisis massa venenatis,
+                  non lorem lobortis?
+                  <span>
+                    <BiChevronDown />
+                  </span>
+                </h3>
+                {firstD ? (
+                  <div className="mt-7">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quo, explicabo cupiditate velit fugit at eius facilis
+                      dolorum tempora tempore libero porro facere provident,
+                      quisquam fugiat fuga quibusdam voluptate dolor maxime!
+                    </p>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
+              <div
+                onClick={() => {
+                  setSecondD(!secondD);
+                }}
+                className="cursor-pointer py-7 border-nav-border border-solid border-t border-l-0 border-r-0 border-b-0"
+              >
+                <h3 className="font-normal text-xl text-main-button flex justify-between">
+                  Venenatis nulla sagittis nunc, lobortis nec sollicitudin
+                  neque, dolor?
+                  <span>
+                    <BiChevronDown />
+                  </span>
+                </h3>
+                {secondD ? (
+                  <div className="mt-7">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quo, explicabo cupiditate velit fugit at eius facilis
+                      dolorum tempora tempore libero porro facere provident,
+                      quisquam fugiat fuga quibusdam voluptate dolor maxime!
+                    </p>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
+              <div
+                onClick={() => {
+                  setThirdD(!thirdD);
+                }}
+                className="cursor-pointer py-7 border-nav-border border-solid border-t border-l-0 border-r-0 border-b-0"
+              >
+                <h3 className="font-normal text-xl text-main-button flex justify-between">
+                  Varius ultricies molestie tellus fermentum, viverra ipsum
+                  scelerisque etiam lorem?
+                  <span>
+                    <BiChevronDown />
+                  </span>
+                </h3>
+                {thirdD ? (
+                  <div className="mt-7">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quo, explicabo cupiditate velit fugit at eius facilis
+                      dolorum tempora tempore libero porro facere provident,
+                      quisquam fugiat fuga quibusdam voluptate dolor maxime!
+                    </p>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
+              <div
+                onClick={() => {
+                  setForthD(!forthD);
+                }}
+                className="cursor-pointer py-7 border-nav-border border-solid border-t border-l-0 border-r-0 border-b-0"
+              >
+                <h3 className="font-normal text-xl text-main-button flex justify-between">
+                  Nulla etiam vitae, at sagittis, nibh ultrices mattis feugiat
+                  faucibus?
+                  <span>
+                    <BiChevronDown />
+                  </span>
+                </h3>
+                {forthD ? (
+                  <div className="mt-7">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quo, explicabo cupiditate velit fugit at eius facilis
+                      dolorum tempora tempore libero porro facere provident,
+                      quisquam fugiat fuga quibusdam voluptate dolor maxime!
+                    </p>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
+              <div
+                onClick={() => {
+                  SetFifthD(!fifthD);
+                }}
+                className="cursor-pointer py-7 border-nav-border border-solid border-t border-l-0 border-r-0 border-b-0"
+              >
+                <h3 className="font-normal text-xl text-main-button flex justify-between">
+                  Sagittis consectetur gravida nec turpis eros, id sit et,
+                  dictum?
+                  <span>
+                    <BiChevronDown />
+                  </span>
+                </h3>
+                {fifthD ? (
+                  <div className="mt-7">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quo, explicabo cupiditate velit fugit at eius facilis
+                      dolorum tempora tempore libero porro facere provident,
+                      quisquam fugiat fuga quibusdam voluptate dolor maxime!
+                    </p>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
+      <footer className="bg-white py-16 sm:py-12">
+        <div className="container| w-11/12 mx-auto  flex sm:flex-col   justify-between sm:items-center sm:text-center sm:gap-12 text-base font-normal ">
+          <div>
+            <ul className="flex flex-col gap-5">
+              <li className="font-medium">Categories</li>
+              <li>User Interface</li>
+              <li>User Experience</li>
+              <li>Digital Media</li>
+              <li>Lifestyle</li>
+              <li>Programming</li>
+              <li>Animation</li>
+            </ul>
+          </div>
+          <div>
+            <ul className="flex flex-col gap-5">
+              <li className="font-medium">Product</li>
+              <li>Pricing Interface</li>
+              <li>Overview</li>
+              <li>Browse</li>
+              <li>Accessibility</li>
+              <li>Five</li>
+              <li>ChangeLog</li>
+            </ul>
+          </div>
+          <div>
+            <ul className="flex flex-col gap-5">
+              <li className="font-medium">Solutions</li>
+              <li>Brainstorming</li>
+              <li>Ideation</li>
+              <li>Wireframing</li>
+              <li>Reaseach</li>
+              <li>Design</li>
+              <li>Concept</li>
+            </ul>
+          </div>
+          <div>
+            <ul className="flex flex-col gap-5">
+              <li className="font-medium">Resources</li>
+              <li>Help Center</li>
+              <li>Blog</li>
+              <li>Tutorials</li>
+              <li>FAQs</li>
+              <li>Community</li>
+              <li>Events</li>
+            </ul>
+          </div>
+          <div>
+            <ul className="flex flex-col gap-5">
+              <li className="font-medium">Support</li>
+              <li>Contact Us</li>
+              <li>Developers</li>
+              <li>Documention</li>
+              <li>Integrations</li>
+              <li>Reports</li>
+              <li>Webinar</li>
+            </ul>
+          </div>
+          <div>
+            <ul className="flex flex-col gap-5">
+              <li className="font-medium">Company</li>
+              <li>About</li>
+              <li>Press</li>
+              <li>Events</li>
+              <li>Careers</li>
+              <li>Customers</li>
+              <li>Partners</li>
+            </ul>
+          </div>
+        </div>
+        <hr className=" bg-nav-border my-7 w-10/12 mx-auto  h-[2px]" />
+      </footer>
     </>
   );
 }
