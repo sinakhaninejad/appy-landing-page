@@ -49,6 +49,7 @@ function App() {
   }
 
   function getCurrentDimension() {
+    console.log("hello there :)");
     return {
       width: window.innerWidth,
       height: window.innerHeight,
