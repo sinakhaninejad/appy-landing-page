@@ -2,8 +2,14 @@
 import { BiSolidChevronDown } from "react-icons/bi";
 import { RiCloseFill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { FaPlay } from "react-icons/fa";
+import { FaFacebook, FaPlay } from "react-icons/fa";
 import { BiChevronDown } from "react-icons/bi";
+//footer icons
+import { BsYoutube } from "react-icons/bs";
+import { BsTwitter } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
+import { BiLogoFacebook } from "react-icons/bi";
+import { FaLinkedinIn } from "react-icons/fa";
 //pictures
 import HeroPicture from "./images/hero-picture.png";
 import EssentialPicture from "./images/essential-sec-pic.png";
@@ -30,9 +36,9 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 function App() {
-  const [navExtendted, setNavExtend] = useState(true);
+  const [navExtendted, setNavExtend] = useState(false);
 
-  const [firstD, setFirstD] = useState(true);
+  const [firstD, setFirstD] = useState(false);
   const [secondD, setSecondD] = useState(false);
   const [thirdD, setThirdD] = useState(false);
   const [forthD, setForthD] = useState(false);
@@ -505,7 +511,7 @@ function App() {
           </div>
         </section>
       </main>
-      <footer className="bg-white py-16 sm:py-12">
+      <footer className="bg-white pt-16 sm:py-12">
         <div className="container| w-11/12 mx-auto  flex sm:flex-col   justify-between sm:items-center sm:text-center sm:gap-12 text-base font-normal ">
           <div>
             <ul className="flex flex-col gap-5">
@@ -574,7 +580,18 @@ function App() {
             </ul>
           </div>
         </div>
-        <hr className=" bg-nav-border my-7 w-10/12 mx-auto  h-[2px]" />
+        <hr className=" bg-nav-border my-7 w-11/12 mx-auto  h-[2px]" />
+        <div className="w-11/12 mx-auto my-7 flex sm:flex-col justify-between items-center">
+          <h4 className="font-bold text-2xl text-main-button">Appy</h4>
+          <p className="font-normal text-base">@ 2023 All rights reserved.</p>
+          <div className="flex justify-between gap-7 text-footer-gray">
+            <BsYoutube size={25} />
+            <FaFacebook size={25} />
+            <BsTwitter size={25} />
+            <BsInstagram size={25} />
+            <FaLinkedinIn size={25} />
+          </div>
+        </div>
       </footer>
     </>
   );
