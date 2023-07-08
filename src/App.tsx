@@ -8,7 +8,6 @@ import { BiChevronDown } from "react-icons/bi";
 import { BsYoutube } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
-import { BiLogoFacebook } from "react-icons/bi";
 import { FaLinkedinIn } from "react-icons/fa";
 //pictures
 import HeroPicture from "./images/hero-picture.png";
